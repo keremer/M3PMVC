@@ -1,0 +1,111 @@
+﻿@model IEnumerable<M3PMVC.PartyModels.M3PPartyReal>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CiqPrtitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CiqPrname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CiqPrmidname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CiqPrsurname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CiqPruyruk)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CiqPrdt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CiqPrdy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CiqPrbabaad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CiqPrannead)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CiqPrssec)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CiqPrkimlikmaster)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KurumSicilNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Calismakartisure)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Not)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CiqPrtitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CiqPrname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CiqPrmidname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CiqPrsurname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CiqPruyruk)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CiqPrdt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CiqPrdy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CiqPrbabaad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CiqPrannead)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CiqPrssec)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CiqPrkimlikmaster)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KurumSicilNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Calismakartisure)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Not)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CiqPrID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CiqPrID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CiqPrID })
+        </td>
+    </tr>
+}
+
+</table>

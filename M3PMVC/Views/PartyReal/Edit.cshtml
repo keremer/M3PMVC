@@ -1,0 +1,142 @@
+﻿@model M3PMVC.PartyModels.M3PPartyReal
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>PartyReal</legend>
+
+        @Html.HiddenFor(model => model.CiqPrID)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CiqPrtitle)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CiqPrtitle)
+            @Html.ValidationMessageFor(model => model.CiqPrtitle)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CiqPrname)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CiqPrname)
+            @Html.ValidationMessageFor(model => model.CiqPrname)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CiqPrmidname)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CiqPrmidname)
+            @Html.ValidationMessageFor(model => model.CiqPrmidname)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CiqPrsurname)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CiqPrsurname)
+            @Html.ValidationMessageFor(model => model.CiqPrsurname)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CiqPruyruk)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CiqPruyruk)
+            @Html.ValidationMessageFor(model => model.CiqPruyruk)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CiqPrdt)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CiqPrdt)
+            @Html.ValidationMessageFor(model => model.CiqPrdt)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CiqPrdy)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CiqPrdy)
+            @Html.ValidationMessageFor(model => model.CiqPrdy)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CiqPrbabaad)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CiqPrbabaad)
+            @Html.ValidationMessageFor(model => model.CiqPrbabaad)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CiqPrannead)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CiqPrannead)
+            @Html.ValidationMessageFor(model => model.CiqPrannead)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CiqPrssec)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CiqPrssec)
+            @Html.ValidationMessageFor(model => model.CiqPrssec)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CiqPrkimlikmaster)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CiqPrkimlikmaster)
+            @Html.ValidationMessageFor(model => model.CiqPrkimlikmaster)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.KurumSicilNo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.KurumSicilNo)
+            @Html.ValidationMessageFor(model => model.KurumSicilNo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Calismakartisure)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Calismakartisure)
+            @Html.ValidationMessageFor(model => model.Calismakartisure)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Not)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Not)
+            @Html.ValidationMessageFor(model => model.Not)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

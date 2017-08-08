@@ -1,0 +1,75 @@
+﻿@model M3PMVC.Models.PartyLegal
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>PartyLegal</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CiqPartyTuzelTicariUnvan)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CiqPartyTuzelTicariUnvan)
+            @Html.ValidationMessageFor(model => model.CiqPartyTuzelTicariUnvan)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CiqPartTuzelvalfrom)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CiqPartTuzelvalfrom)
+            @Html.ValidationMessageFor(model => model.CiqPartTuzelvalfrom)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CiqPartyvalto)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CiqPartyvalto)
+            @Html.ValidationMessageFor(model => model.CiqPartyvalto)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CiqPartyvergid)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CiqPartyvergid)
+            @Html.ValidationMessageFor(model => model.CiqPartyvergid)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CiqPartyTuzelvergino)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CiqPartyTuzelvergino)
+            @Html.ValidationMessageFor(model => model.CiqPartyTuzelvergino)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CiqPartyTuzelintype)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CiqPartyTuzelintype)
+            @Html.ValidationMessageFor(model => model.CiqPartyTuzelintype)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

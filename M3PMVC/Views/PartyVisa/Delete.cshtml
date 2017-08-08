@@ -1,0 +1,68 @@
+﻿@model M3PMVC.PartyModels.PartyVisa
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>PartyVisa</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CiqPartyVizetipi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CiqPartyVizetipi)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ciaPartyVizebas)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ciaPartyVizebas)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ciaPartyVizeson)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ciaPartyVizeson)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ciaPartyVizecnt)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ciaPartyVizecnt)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ciaPartyVizeno)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ciaPartyVizeno)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CiqPartyVizeEnt)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CiqPartyVizeEnt)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.pPasaportID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.pPasaportID)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

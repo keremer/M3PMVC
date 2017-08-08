@@ -1,0 +1,85 @@
+﻿@model IEnumerable<M3PMVC.Presentation.EmployeeList>
+@using M3PMVC.Helpers
+
+@{
+    bool isset = false;
+    string myclass = null;
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.vn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.vt)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    {
+        var wdays = item.pt.Date.Subtract(DateTime.Now);
+        if (wdays.Days <= 7)
+        {
+            isset = true;
+            myclass = "m3purgent";
+        }
+        else if (wdays.Days <= 30)
+        {
+            isset = true;
+            myclass = "m3pwarning";
+        }
+        else
+        {
+            isset = false;
+            myclass = "";
+        }
+
+    };
+    <tr  @Html.ccss(isset, myclass)>
+        <td>
+            @Html.DisplayFor(modelItem => item.ad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sd)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.vn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.vt)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

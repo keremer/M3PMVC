@@ -1,0 +1,69 @@
+﻿@model IEnumerable<M3PMVC.Presentation.EmployeeList>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CiqPartyVizetipi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ciaPartyVizebas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ciaPartyVizeson)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ciaPartyVizecnt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ciaPartyVizeno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CiqPartyVizeEnt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pPasaportID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CiqPartyVizetipi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ciaPartyVizebas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ciaPartyVizeson)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ciaPartyVizecnt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ciaPartyVizeno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CiqPartyVizeEnt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pPasaportID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CiqPartyVisaID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CiqPartyVisaID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CiqPartyVisaID })
+        </td>
+    </tr>
+}
+
+</table>

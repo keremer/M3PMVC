@@ -1,0 +1,64 @@
+﻿@model M3PMVC.PartyModels.PartyVisa
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>PartyVisa</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CiqPartyVizetipi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CiqPartyVizetipi)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ciaPartyVizebas)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ciaPartyVizebas)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ciaPartyVizeson)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ciaPartyVizeson)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ciaPartyVizecnt)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ciaPartyVizecnt)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ciaPartyVizeno)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ciaPartyVizeno)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CiqPartyVizeEnt)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CiqPartyVizeEnt)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.pPasaportID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.pPasaportID)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.CiqPartyVisaID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

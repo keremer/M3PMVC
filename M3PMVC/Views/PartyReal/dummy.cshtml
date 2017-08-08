@@ -1,0 +1,79 @@
+﻿@model IEnumerable<M3PMVC.Models.PartyPassport>
+@using M3PMVC.Helpers
+@{
+    bool isset = false;
+    string myclass = null;
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PartyReal.CiqPrname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CiqPartyPasno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CiqPartyPasvert)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CiqPartyPasgec)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CiqPartyPasvery)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model)
+          
+{
+    {
+        if (item.PartyReal.CiqPrname.Equals("Kerem"))
+        {
+            isset = true;
+            myclass = "m3pwarning";
+        }
+        else
+        {
+            isset = false;
+            myclass = "";
+        }
+            
+    };
+  {  
+      <tr @Html.ccss(isset, myclass)>
+        <td>
+            @Html.ActionLink(item.PartyReal.CiqPrname + " " + item.PartyReal.CiqPrsurname,"", new 
+       { Controller = "PartyReal/Details/" + item.PartyReal.CiqPrID.ToString(), action = "Details"})
+        </td>
+        <td>
+            @Html.ActionLink(item.CiqPartyPasno,"", new
+       { Controller = "PartyPassport/Details/" + item.CiqPartyPasID.ToString(), action = "Details"})
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CiqPartyPasvert)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CiqPartyPasgec)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CiqPartyPasvery)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CiqPartyPasID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CiqPartyPasID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CiqPartyPasID })
+        </td>
+    </tr>
+    }
+}
+
+</table>
+

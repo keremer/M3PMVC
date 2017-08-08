@@ -1,0 +1,63 @@
+﻿@model IEnumerable<M3PMVC.Models.PartyLegal>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CiqPartyTuzelTicariUnvan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CiqPartTuzelvalfrom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CiqPartyvalto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CiqPartyvergid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CiqPartyTuzelvergino)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CiqPartyTuzelintype)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CiqPartyTuzelTicariUnvan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CiqPartTuzelvalfrom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CiqPartyvalto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CiqPartyvergid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CiqPartyTuzelvergino)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CiqPartyTuzelintype)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CiqPartyTuzelID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CiqPartyTuzelID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CiqPartyTuzelID })
+        </td>
+    </tr>
+}
+
+</table>

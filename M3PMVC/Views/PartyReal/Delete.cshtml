@@ -1,0 +1,117 @@
+﻿@model M3PMVC.PartyModels.M3PPartyReal
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>PartyReal</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CiqPrtitle)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CiqPrtitle)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CiqPrname)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CiqPrname)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CiqPrmidname)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CiqPrmidname)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CiqPrsurname)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CiqPrsurname)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CiqPruyruk)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CiqPruyruk)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CiqPrdt)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CiqPrdt)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CiqPrdy)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CiqPrdy)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CiqPrbabaad)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CiqPrbabaad)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CiqPrannead)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CiqPrannead)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CiqPrssec)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CiqPrssec)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CiqPrkimlikmaster)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CiqPrkimlikmaster)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.KurumSicilNo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.KurumSicilNo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Calismakartisure)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Calismakartisure)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Not)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Not)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
